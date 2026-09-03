@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title in address line for homepage -->
+    <title>InterCV</title>
+    
+    <!-- Read CSS file for stylesheet -->
+    <link href="stylesheets/generalPageStyle.css" rel="stylesheet" />
+    <link href="stylesheets/homepageStyle.css" rel="stylesheet" /> <!-- Specific for the homepage -->
+</head>
+<body>
+    <!-- Text on homepage -->
+    <!-- Make a container for the page content - gives more flexibility in layout -->
+    <div class="page">
+        <!-- Header for homepage -->
+        <h1>Welcome to the Interactive CV of Mads Rud Larsen</h1>
+        <!-- Container with profile information nested inside "page" container --> 
+        <div class="profile">
+            <p> Basic information:<br>
+                Name: Mads Rud Larsen<br>
+                Email: rudlarsen@yahoo.dk<br>
+                Location: Frederiksberg, Denmark
+            </p>
+
+            <img src="images/CV_billede.jpg" alt="Profile photo"/>
+        </div>
+
+        <!-- Make necessary buttons on homepage -->
+        <!-- OUTDATED NOW
+        <button onclick="navigatePage('education')">Education</button>
+        <button onclick="navigatePage('workExperience')">Work experience</button>
+        <button onclick="navigatePage('publications')">Publications</button>
+        <button onclick="navigatePage('grantsAndDiploma')">Grants and diploma</button>
+        -->
+
+        <!-- Panes to other pages -->
+        <div class="panePage">
+            <!-- Make different class names for each pane to change background images -->
+            <a href="education.html" class="pane pane-edu"> <!-- "pane" is a custom name I gave this class -->
+                <h2>Education</h2>
+            </a>
+
+            <a href="workExperience.html" class="pane pane-work">
+                <h2>Work experience</h2>
+            </a>
+
+            <a href="publications.html" class="pane pane-pub">
+                <h2>Publications</h2>
+            </a>
+
+            <a href="grantsAndDiploma.html" class="pane pane-grants">
+                <h2>Grants and diploma</h2>
+            </a>
+
+            <a href="projects.html" class="pane pane-proj">
+                <h2>Projects</h2>
+            </a>
+        </div>
+    </div>
+
+    <!-- OUTDATED NOW 
+    <script>
+        function navigatePage(page) {
+            window.location.href = page + ".html";
+        }
+    </script>
+    -->
+</body>
+
+</html>

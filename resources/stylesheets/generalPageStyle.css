@@ -1,0 +1,45 @@
+
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: #d1d1d1;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.page {
+    position: relative;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.page p {
+    margin: 0;
+    color: #d1d1d1;
+}
+
+/* In the background of the page */
+.page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background-image: url("../images/CV_billede.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; */
+    z-index: -1; /* Places the photo in the background below the text, buttons etc. */
+
+    /* Graphic background */
+    background:
+        /* radial-gradient(circle at 20% 20%, rgba(0, 200, 255, 0.35), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255, 0, 150, 0.3), transparent 30%), Circle 80% from the left and 30% from the top
+        radial-gradient(circle at 50% 80%, rgba(255, 200, 0, 0.2), transparent 40%), */
+        linear-gradient(135deg, #143a10, #1e293b); /* Linear gradient between two colours from top left to bottom right */
+        opacity: 1.0; /* Otherwise it's too dark */
+
+    filter: blur(20px); /* Basically a Gaussian blur to smoothen the hard edges of 'radial-gradient' */
+    transform: scale(1.1); /* By zooming in the blur is not clipped off, but fades gradually */
+}

@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Read CSS file for stylesheet -->
+    <link href="stylesheets/generalPageStyle.css" rel="stylesheet" />
+    <link href="stylesheets/homepageStyle.css" rel="stylesheet" />
+    <link href="stylesheets/projectsStyle.css" rel="stylesheet" />
+
+    <!-- Include Plotly for interactive figures -->
+    <!-- JavaScript Open Source Graphing Library -->
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+    <!-- Import random walk script -->
+    <script src="/randomwalk.js"></script> 
+</head>
+<body>
+    <div class="page">
+        <h1>Projects</h1>
+        <p>Anomalous transport priors for phase-space tomography</p>
+        <ul>
+            <li>Covers sub- and super-diffusive transport</li>
+            <li>Resonant wave-particle interaction is a special case</li>
+            <li>Can be modelled with Lévy flights instead of normal Brownian motion</li>
+            <li>Test below how Lévy flights display occasional long jumps</li>
+        </ul>
+        <div class="paneFigures">
+            <!-- Brownian motion -->
+            <div class="figurePane">
+                <button onclick="runRW(true)">Run Brownian motion</button>
+
+                <!-- OUTDATED FOR NOW! THIS MEANS I SHOULD ALSO OUTCOMMENT THE RELATED SCRIPT, OTHERWISE I GET AN ERROR -->
+                <!-- Plot read as base64 png
+                <p id="RWresult"></p>
+                <img id="RWplot" style="max-width: 100%; display: none;">
+                -->
+                
+                <!-- Interactive plot -->
+                <div id="BMplotInter"></div>
+            </div>
+            <!-- Levy flights -->
+            <div class="figurePane">
+                <button onclick="runRW(false)">Run Lévy flights</button>
+
+                <!-- OUTDATED FOR NOW! THIS MEANS I SHOULD ALSO OUTCOMMENT THE RELATED SCRIPT, OTHERWISE I GET AN ERROR -->
+                <!-- Plot read as base64 png
+                <p id="RWresult"></p>
+                <img id="RWplot" style="max-width: 100%; display: none;">
+                -->
+                
+                <!-- Interactive plot -->
+                <div id="LFplotInter"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+
+.page button {
+    background-color: #000;
+    color: #d1d1d1;
+    border-radius: 20%;
+}
+
+.page p {
+    color: #d1d1d1;
+}
+
+/* When actively clicking button */
+.page button:active {
+            background-color: rgb(84, 84, 84);
+            /* transform: translateY(4px); Move button down when clicking */
+        }
+
+/* For each anchor */
+.page a {
+    color: #9a9a9a;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.1s ease; /* Gradually transform text */
+    display: inline-block; /* allows transform to work predictably */
+}
+
+.page a:hover { /* When mouse is hovering above the anchor */
+    text-decoration: underline;
+    transform: scale(1.04);
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between; /* Place the two contents next to each other */
+    align-items: center;
+}
+.profile p {
+    margin: 0;
+    color: #d1d1d1;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Panes */
+.panePage {
+    display: flex;
+    flex-wrap: wrap; /* wrap on multiple rows when needed */
+    gap: 20px;
+}
+
+.pane {
+    position: relative;
+    display: block;
+    width: 200px;
+    padding: 24px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    margin-top: 8px;
+    /* background: #fff; */
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; /* Keeps the image inside rounded corners */
+}
+
+.pane::before {
+    content: "";
+    position: absolute;
+    inset: 0;           /* top:0; right:0; bottom:0; left:0; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1; /* Places the photo in the background below the text, buttons etc. */
+}
+
+.pane-edu::before {
+    background-image: url("../images/image_for_education.jpg");
+}
+
+.pane-work::before {
+    background-image: url("../images/CV_billede.jpg");
+}
+
+.pane-pub::before {
+    background-image: url(../images/CV_billede.jpg);
+}
+
+.pane-grants::before {
+    background-image: url(../images/CV_billede.jpg);
+}
+
+.pane-proj::before {
+    background-image: url(../images/CV_billede.jpg);
+}
+
+.pane:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    /* Making the pane appear hovering above the page
+    box-shadow: horizontal-offset vertical-offset blur-radius color;
+    Combined with the translateY above, it looks like the pane is lifted.
+    */
+}
+
+.pane h2 {
+    margin-top: 0;
+    color: #d1d1d1;
+}
+
+.pane p {
+    margin-bottom: 0;
+    color: #d1d1d1;
+}
